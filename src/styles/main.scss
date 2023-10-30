@@ -1,0 +1,137 @@
+@use "./variables/reset.scss";
+@use "./variables/variables.scss" as *;
+
+
+
+@mixin text($font-size: 16px) {
+    font-size: $font-size;
+    line-height: $font-size + 10;
+}
+
+@mixin title($fontSize: 40px) {
+    @include text($fontSize);
+    color: $secundaryColor;
+
+}
+
+
+body {
+    background-color: $bgColor;
+}
+
+.text--big {
+    @include text(18px)
+}
+
+.text {
+    @include text(20px);
+    color: $secundaryColor
+}
+
+.text--small {
+    @include text(18px);
+    color: $secundaryColor
+}
+
+.title--big {
+    @include title(44px)
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(28px)
+}
+
+.link-text {
+    @include text(18px);
+    text-decoration: underline;
+    color: $secundaryColor;
+}
+
+
+
+.hero {
+    padding: 5.6vw;
+    height: 80vh;
+
+
+    &__content {
+
+
+      
+        width: 100%;
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(2, 35%);
+        height: 80vh;
+        align-items: center;
+
+
+        h1 {
+
+            margin-bottom: 40px;
+
+            img {
+                width: 320px;
+            }
+        }
+
+        h3 {
+            margin-bottom: 40px;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 18px;
+            margin: 2em 20px 0 0;
+            text-align: center;
+
+
+            li {
+                display: flex;
+                flex-direction: column;
+            }
+
+
+
+            button {
+
+                width: 215px;
+                padding: 10px;
+                background-color:#6421ff;
+                text-align: center;
+                margin: 0 auto;
+                cursor: pointer;
+                border-radius: 6px;
+
+            }
+
+            img {
+                height: 60px;
+                margin-bottom: 1em;
+            }
+        }
+
+
+    }
+
+    &__image {
+       background-size: contain;
+       padding-left: 85px;
+    
+
+    }
+
+    &__title {
+       width:450px;
+       margin: 0 2.2em 0 0;
+       
+    }
+
+
+
+}
