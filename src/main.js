@@ -1,7 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll("[data-tab-button]");
-  
+
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function (btn) {
 
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let aba = document.querySelector(`[data-tab-id = ${abaAlvo} ]`);
             removeClass()
             aba.classList.add("shows__items--is-active")
-            
+
         })
     }
 
