@@ -1,5 +1,6 @@
 @use "./variables/reset.scss";
 @use "./variables/variables.scss" as *;
+@use "shows";
 
 
 @font-face{
@@ -23,6 +24,7 @@
 
 body {
     background-color: $bgColor;
+    height: 100vh;
 }
 
 .text--big {
