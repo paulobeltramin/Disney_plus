@@ -1,6 +1,7 @@
 @use "./variables/reset.scss";
 @use "./variables/variables.scss" as *;
 @use "shows";
+@use "plans";
 
 
 @font-face{
@@ -38,7 +39,8 @@ body {
 
 .text--small {
     @include text(18px);
-    color: $secundaryColor
+    color: $secundaryColor;
+    
 }
 
 .title--big {

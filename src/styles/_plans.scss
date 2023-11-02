@@ -1,0 +1,64 @@
+@use "./variables/variables" as *;
+
+
+.container{
+    h2{
+        text-align: center;
+        margin-top: 2em;
+    }
+
+    p{
+        text-align: center;
+        
+    }
+
+    h5{
+      text-align:center ;
+      padding-top: 2.2em;
+    }
+
+}
+
+.plans{
+    display: flex;
+    justify-content: space-around;
+  
+
+    &__items{
+
+         display: flex;
+         flex-direction: column;
+         max-width: 380px;
+         width: 100%;
+
+         &:nth-child(2){
+          background-image: url(../images/fundo_combo_plus.png);
+          background-repeat: no-repeat;
+         background-size: cover;
+         }
+
+          img{
+            max-width: 340px;
+           margin-bottom: 10px;
+          }
+
+          strong{
+            text-align: center;
+         
+          }
+
+          button{
+            width: 50%;
+            margin: 1em auto;
+            height: 40px;
+            background-color: #6421ff;
+            color: $primaryColor;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+
+            font-size: 18px;
+            
+        }
+    }
+}
