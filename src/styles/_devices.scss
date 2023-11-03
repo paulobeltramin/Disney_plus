@@ -1,0 +1,37 @@
+
+.devices{
+   
+    padding-top: 2em;
+
+    ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;  
+        
+    
+    }
+
+    &__item{
+      
+        h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 2em;
+            font-size: 25px;
+          }
+         
+        img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 310px;
+        }
+
+      li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+}
