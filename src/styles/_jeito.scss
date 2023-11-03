@@ -1,0 +1,22 @@
+
+
+.jeito{
+  padding: 20px;
+  margin-top: 8%;
+
+
+   &__content{
+
+     display: grid;
+    grid-template-columns:repeat(2, 50%);
+    align-items: center;
+
+    h2{
+        margin-bottom: 1em;
+    }
+
+    img{
+        max-width: 500px;
+    }
+   }
+}
