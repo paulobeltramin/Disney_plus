@@ -7,12 +7,12 @@
     }
 
 
-  
+
     &__questions {
 
-      
-         
-         &__item{
+
+
+        &__item {
             background-color: #13151d;
             color: white;
             font-weight: bold;
@@ -24,56 +24,56 @@
             margin: 1em auto;
             cursor: pointer;
             gap: 20px;
-            flex-direction: column ;
-    
-           &__question{
-            display: flex;
-            justify-content: space-between;
+            flex-direction: column;
 
-            &::after{
-                content: '+';
-                padding-right: 10px;
-                font-weight:bold;
-                font-size: 30px;
-            }
-           }
+            &__question {
+                display: flex;
+                justify-content: space-between;
 
-           &__response{
-             overflow: hidden;
-             height: 0;
-             font-size: 20px;
-             color: silver;
-             line-height: 30px;
-             padding: 0 10px;
-             transition: height, ease .5s;
-           }
-           
-           &--is-open{
-
-            .faq__questions__item__question::after{
-               content: '-';
-              
-
+                &::after {
+                    content: '+';
+                    padding-right: 10px;
+                    font-weight: bold;
+                    font-size: 30px;
+                }
             }
 
-           .faq__questions__item__response{
-
-                height: auto;
-                padding-bottom: 10px;
+            &__response {
+                overflow: hidden;
+                height: 0;
+                font-size: 20px;
+                color: silver;
+                line-height: 30px;
+                padding: 0 10px;
                 transition: height, ease .5s;
-              
-              }
+            }
+
+            &--is-open {
+
+                .faq__questions__item__question::after {
+                    content: '-';
+
+
+                }
+
+                .faq__questions__item__response {
+
+                    height: auto;
+                    padding-bottom: 10px;
+                    transition: height, ease .5s;
+
+                }
 
 
 
-           }
-
-         }
-      
-
+            }
 
         }
 
-      
+
 
     }
+
+
+
+}
