@@ -1,6 +1,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll("[data-tab-button]");
+    const questions = document.querySelectorAll("[data-tab-question]");
 
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function (btn) {
@@ -14,7 +15,20 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
+
+    for (let i = 0; i < questions.length; i++) {
+        questions[i].addEventListener("click", responseOpen)
+
+    }
+
 });
+
+function responseOpen(elemento) {
+    const classe = 'faq__questions__item--is-open'
+
+    const elementDaddy = elemento.target.parentNode;
+    elementDaddy.classList.toggle(classe)
+}
 
 
 function removeClass() {
@@ -24,3 +38,4 @@ function removeClass() {
         tabId[i].classList.remove("shows__items--is-active");
     }
 }
+
