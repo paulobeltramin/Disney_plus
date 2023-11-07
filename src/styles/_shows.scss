@@ -24,7 +24,7 @@
         li {
             list-style: none;
             display: flex;
-           
+
 
         }
 
@@ -52,7 +52,7 @@
 
         li {
             list-style: none;
-           
+
 
         }
 
@@ -63,8 +63,41 @@
             border: 0px;
             padding: 18px;
             color: $secundaryColor;
-            cursor: pointer; 
+            cursor: pointer;
             text-transform: uppercase;
+        }
+
+    }
+
+}
+
+@media screen and (max-width:$mobile) {
+
+    .shows {
+
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+
+        &__items {
+
+            grid-template-columns: 1fr 1fr;
+            height: auto;
+            margin-top: 10px;
+            gap: 10px;
+            padding: 0 10px;
+        }
+
+        &__tabs {
+            margin-top: 0;
+
+            button {
+                margin-bottom: 10px;
+                font-size: 12px;
+                padding: 10px;
+
+            }
+
         }
 
     }

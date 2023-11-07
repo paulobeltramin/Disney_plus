@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll("[data-tab-button]");
     const questions = document.querySelectorAll("[data-tab-question]");
 
+
+    // atrações
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function (btn) {
 
@@ -15,14 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
         })
     }
 
-
     for (let i = 0; i < questions.length; i++) {
         questions[i].addEventListener("click", responseOpen)
 
     }
 
-});
 
+
+
+});
+//  respostas das faqs
 function responseOpen(elemento) {
     const classe = 'faq__questions__item--is-open'
 
@@ -30,7 +34,7 @@ function responseOpen(elemento) {
     elementDaddy.classList.toggle(classe)
 }
 
-
+// remover classe das shows
 function removeClass() {
     const tabId = document.querySelectorAll("[data-tab-id]");
 

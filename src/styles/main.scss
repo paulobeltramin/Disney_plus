@@ -7,11 +7,12 @@
 @use "devices";
 @use "faq";
 @use "footer";
+@use "header";
 
 
-@font-face{
-    font-family: Avenir ,  sans-serif;
-    src:url(../../assets/fonts/Avenir\ Regular.ttf)
+@font-face {
+    font-family: Avenir, sans-serif;
+    src: url(../../assets/fonts/Avenir\ Regular.ttf)
 }
 
 
@@ -45,7 +46,7 @@ body {
 .text--small {
     @include text(18px);
     color: $secundaryColor;
-    
+
 }
 
 .title--big {
@@ -75,8 +76,6 @@ body {
 
     &__content {
 
-
-      
         width: 100%;
         text-align: center;
         display: grid;
@@ -117,11 +116,15 @@ body {
 
                 width: 215px;
                 padding: 10px;
-                background-color:#6421ff;
+                background-color: #6421ff;
                 text-align: center;
                 margin: 0 auto;
                 cursor: pointer;
                 border-radius: 6px;
+
+                &:hover {
+                    background-color: lighten(#6421ff, 3%);
+                }
 
             }
 
@@ -135,18 +138,98 @@ body {
     }
 
     &__image {
-       background-size: contain;
-       padding-left: 85px;
-    
+        background-size: contain;
+        padding-left: 85px;
+
 
     }
 
     &__title {
-       width:450px;
-       margin: 0 2.2em 0 0;
-       
+        width: 450px;
+        margin: 0 2.2em 0 0;
+
     }
 
+}
 
+@media screen and (max-width:$mobile) {
+
+    .hero {
+
+        max-width: 740px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        &__content {
+
+            text-align: center;
+            display: grid;
+            grid-template-columns: repeat(1, 50%);
+
+            h1 {
+
+                margin-bottom: 30px;
+
+                img {
+                    width: 150px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 auto;
+                }
+            }
+
+            h2 {
+
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+
+            ul {
+
+                padding: 10px;
+
+                li {
+                    display: flex;
+                    flex-direction: column;
+
+                }
+
+                button {
+                    width: 150px;
+                    padding: 10px;
+
+                }
+
+                img {
+                    height: 40px;
+                    margin-bottom: 1em;
+                }
+            }
+
+        }
+
+        &__image {
+
+            display: none;
+
+        }
+
+        &__title {
+
+            width: 350px;
+            margin: 0 2em 1em 0;
+
+        }
+
+        p {
+            padding-top: 10px;
+        }
+
+    }
 
 }

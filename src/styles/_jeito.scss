@@ -1,7 +1,8 @@
+@use "./variables/variables" as *;
+
 .jeito {
   padding: 20px;
   margin-top: 8%;
-
 
   &__content {
 
@@ -16,6 +17,30 @@
 
     img {
       max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width:$mobile) {
+
+  .jeito {
+
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      img {
+        margin-top: 2em;
+      }
+
+      h2 {
+        font-size: 30px;
+        text-align: center;
+      }
+
+      p {
+        margin-bottom: 2em;
+      }
     }
   }
 }
