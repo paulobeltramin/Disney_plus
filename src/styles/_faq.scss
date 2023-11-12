@@ -1,3 +1,5 @@
+@use "./variables/variables" as *;
+
 .faq {
 
     h2 {
@@ -6,11 +8,7 @@
 
     }
 
-
-
     &__questions {
-
-
 
         &__item {
             background-color: #13151d;
@@ -64,16 +62,24 @@
 
                 }
 
-
-
             }
 
         }
 
-
-
     }
 
+}
 
 
+@media screen and (max-width:$mobile) {
+
+    .faq {
+        h2 {
+            font-size: 30px;
+        }
+
+        li {
+            font-size: 20px;
+        }
+    }
 }

@@ -233,3 +233,36 @@ body {
     }
 
 }
+
+
+@media screen and (max-width:$tablet) {
+    .hero {
+        max-width: 768px;
+        width: 100%;
+
+        &__content {
+            display: flex;
+            flex-direction: column-reverse;
+            margin-top: 50%;
+
+        }
+
+        &__image {
+            img {
+                margin-bottom: -4em;
+            }
+        }
+    }
+
+    .shows {
+
+        &__tabs {
+            padding-top: 40%;
+
+        }
+
+        ul{
+            padding: 0 15px;
+        }
+    }
+}

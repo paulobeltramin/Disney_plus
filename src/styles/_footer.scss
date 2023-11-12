@@ -1,3 +1,6 @@
+@use "./variables/variables" as *;
+
+
 .footer {
     max-width: 1180px;
     width: 100%;
@@ -96,5 +99,54 @@
 
     p {
         padding: 10px;
+    }
+}
+
+
+@media screen and (max-width:$mobile){
+
+    .footer{
+       
+      &__list{
+    
+        display: grid; 
+        width:100%;    
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px; 
+      
+        li{
+           
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+            a{
+                font-size: 12px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              
+            }
+        }
+         &__options{
+            
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: -12px;         
+         }
+        
+      }
+
+         &__secundary{
+           
+            li{
+                display: flex;     
+                align-items: center;
+                font-size: 12px;
+          
+                
+            }
+         }
     }
 }

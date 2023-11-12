@@ -1,3 +1,5 @@
+@use "./variables/variables" as *;
+
 .devices {
 
   padding-top: 2em;
@@ -38,4 +40,46 @@
     }
   }
 
+}
+
+@media screen and (max-width:$mobile) {
+
+
+  .devices {
+
+    h4 {
+      font-size: 30px;
+    }
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+
+    }
+
+    &__item {
+      max-width: 300px;
+      width: 90%;
+
+
+
+      img {
+        max-width: 300px;
+        display: flex;
+        width: 90%;
+        justify-content: center;
+        margin: 15px auto 0;
+      }
+
+      h2 {
+        font-size: 25px;
+        text-align: center;
+      }
+
+      li {
+        text-align: center;
+      }
+    }
+  }
 }
