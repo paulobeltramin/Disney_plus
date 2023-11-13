@@ -92,3 +92,19 @@
   }
 
 }
+
+@media screen and (max-width:$tablet) {
+
+  .plans {
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+    width: 100%;
+
+
+
+
+  }
+}

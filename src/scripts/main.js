@@ -1,16 +1,16 @@
 
 document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll("[data-tab-button]");
-    const questions = document.querySelectorAll("[data-tab-question]");
+    let button = document.querySelectorAll("[data-tab-button]")
+    let questions = document.querySelectorAll("[data-tab-question]")
 
 
-    // atrações
-    for (let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener("click", function (btn) {
+  
+    for (let i = 0; i < button.length; i++) {
+        button[i].addEventListener("click", function (btn) {
 
-            let abaAlvo = btn.target.dataset.tabButton;
+            let abaAlvo = btn.target.dataset.tabButton
 
-            let aba = document.querySelector(`[data-tab-id = ${abaAlvo} ]`);
+            let aba = document.querySelector(`[data-tab-id = ${abaAlvo} ]`)
             removeClass()
             aba.classList.add("shows__items--is-active")
 
@@ -22,11 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-
-
-
 });
-//  respostas das faqs
+
 function responseOpen(elemento) {
     const classe = 'faq__questions__item--is-open'
 
@@ -34,7 +31,7 @@ function responseOpen(elemento) {
     elementDaddy.classList.toggle(classe)
 }
 
-// remover classe das shows
+
 function removeClass() {
     const tabId = document.querySelectorAll("[data-tab-id]");
 
